@@ -9,8 +9,8 @@ from sqlalchemy import create_engine
 #拿到数据
 team=pd.read_csv('/Users/newchama/Documents/My_data/DB/data_to_db/output_company_team.csv')
 
-#参数mysql+pymysql:表示数据库名称，claire:Claire@123@172.16.2.81表示用户名：密码@主机ip；newchama?charset=utf8 表示数据库名称？转义成字符
-engine = create_engine('mysql+pymysql://root:Ncm@123@172.16.2.81/data?charset=utf8')#用sqlalchemy创建引擎  
+#参数mysql+pymysql:表示数据库名称，用户名：密码@主机ip；数据库名?charset=utf8 表示数据库名称？转义成字符
+engine = create_engine('mysql+pymysql://xxx:xxx@xxx/xxx?charset=utf8')#用sqlalchemy创建引擎  
 team.to_sql("company_team", engine, if_exists='append',index=False)
 
 
